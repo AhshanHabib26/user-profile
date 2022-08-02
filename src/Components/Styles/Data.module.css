@@ -1,10 +1,16 @@
 .userContainer{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: tomato;
+    align-content: center;
+    justify-items: center;
+    margin-bottom: 20px;
 }
-.user_image{ 
-    width: 20px;
-    height: 20px;
+.userImage img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+.userName h3{
+    font-size: 18px;
+    color: #363636;
+    cursor: pointer;
 }

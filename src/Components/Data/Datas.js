@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Spinner from "../Spinner/Spinner";
 import Data from "./Data";
+import Styles from "../Styles/Datas.module.css";
+import DetailsPage from "../DetailsPage/DetailsPage";
 
 const Datas = () => {
   const [infos, setInfos] = useState([]);
@@ -27,16 +29,17 @@ const Datas = () => {
   }
 
   return (
-    <div className=" container my-5 text-center">
-      <div className=" row">
-        <div className="left_container col-4 col-md-6 col-sm-12 col-12">
-          <h4 className=" ">User Lists</h4>
+    <div className=" container my-5">
+      <div className={Styles.DatasContainer}>
+        <div className="left_container">
+          <h4 className=" mb-4 text-danger ">User Lists</h4>
           {infos.map((info) => (
             <Data info={info} key={info.id} />
           ))}
         </div>
-        <div className="right_container col-8 col-md-6 col-sm-12 col-12">
-          <h4>User Details</h4>
+        <div className="right_container">
+          <h4 className=" text-success mb-4">User Details</h4>
+          <DetailsPage/>
         </div>
       </div>
     </div>

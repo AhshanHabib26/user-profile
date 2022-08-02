@@ -1,0 +1,27 @@
+.DetailsContainer{
+    border: 1px solid #e7e7e7;
+    padding: 10px;
+    border-radius: 15px;
+}
+.userAvatar{
+    text-align: center;
+}
+.userAvatar img{
+    width: 100px;
+    height: 100px;
+}
+.info{
+    border: 1px solid #e7e7e7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.info label{
+    font-size: 15px;
+    color: #383838;
+    font-weight: 600;
+}
+.info h5{
+    font-size: 16px;
+    color: #383838;
+}
