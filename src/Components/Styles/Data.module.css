@@ -1,0 +1,10 @@
+.userContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: tomato;
+}
+.user_image{ 
+    width: 20px;
+    height: 20px;
+}
