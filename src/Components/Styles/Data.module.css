@@ -2,15 +2,19 @@
     display: flex;
     align-content: center;
     justify-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 .userImage img{
     width: 30px;
     height: 30px;
     margin-right: 5px;
 }
-.userName h3{
+.userName a{
+    text-decoration: none;
     font-size: 18px;
     color: #363636;
     cursor: pointer;
+}
+.userName a:hover{
+    color: #363636;
 }
