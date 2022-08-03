@@ -9,9 +9,7 @@ const DetailsPage = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [dataLoading, setDataLoading] = useState(false);
-  const { Bio, avatar, createdAt, jobTitle, profile} = data;
-
-
+  const { Bio, avatar, createdAt, jobTitle, profile } = data;
 
   // email, firstName, lastName, userName
   const url = `https://602e7c2c4410730017c50b9d.mockapi.io/users/${id}`;
@@ -25,7 +23,7 @@ const DetailsPage = () => {
           setDataLoading(false);
         } else {
           toast.error(result.error);
-          setDataLoading(false)
+          setDataLoading(false);
         }
       });
   }, []);
@@ -38,11 +36,7 @@ const DetailsPage = () => {
     <div>
       <div className={Styles.DetailsContainer}>
         <div className={Styles.userAvatar}>
-          {avatar ? (
-            <img src={Customavatar} alt="" />
-          ) : (
-            <img src={avatar} alt="" />
-          )}
+          <img src={Customavatar} alt="" />
         </div>
         <h5 className=" mt-2 mb-0 text-center text-secondary">
           {profile?.username}
@@ -54,20 +48,38 @@ const DetailsPage = () => {
             </p>
           </div>
           <div className={Styles.info}>
-            <label className='text-primary' htmlFor="">Name:</label>
-            <h5 className='text-success'>{`${profile?.firstName} ${profile?.lastName}`}</h5>
+            <label className="text-primary" htmlFor="">
+              Name:
+            </label>
+            {profile ? (
+              <h5 className="text-success">{`${profile?.firstName} ${profile?.lastName}`}</h5>
+            ) : (
+              <p className="text-success fw-semibold">User Name Not Found</p>
+            )}
           </div>
           <div className={Styles.info}>
-            <label className='text-primary' htmlFor="">Email:</label>
-            <h5 className='text-success' >{jobTitle ? jobTitle : "Didn't Job"}</h5>
+            <label className="text-primary" htmlFor="">
+              Email:
+            </label>
+            <h5 className="text-success">
+              {profile?.email ? profile?.email : "Email Not Found"}
+            </h5>
           </div>
           <div className={Styles.info}>
-            <label className='text-primary' htmlFor="">Job Title:</label>
-            <h5 className='text-success' >{profile?.email ? profile?.email : "Email Not Found"}</h5>
+            <label className="text-primary" htmlFor="">
+              Job Title:
+            </label>
+            <h5 className="text-success">
+              {jobTitle ? jobTitle : "Didn't Job"}
+            </h5>
           </div>
-          <div  className={Styles.info}>
-            <label className='text-primary' htmlFor="">Posted Date:</label>
-            <h5 className='text-success' >{createdAt ? createdAt : "03-8-2022"}</h5>
+          <div className={Styles.info}>
+            <label className="text-primary" htmlFor="">
+              Posted Date:
+            </label>
+            <h5 className="text-success">
+              {createdAt ? createdAt : "03-8-2022"}
+            </h5>
           </div>
         </div>
       </div>
