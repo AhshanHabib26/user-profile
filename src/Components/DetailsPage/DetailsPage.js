@@ -9,7 +9,7 @@ const DetailsPage = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [dataLoading, setDataLoading] = useState(false);
-  const { Bio, avatar, createdAt, jobTitle, profile } = data;
+  const { Bio, createdAt, jobTitle, profile } = data;
 
   // email, firstName, lastName, userName
   const url = `https://602e7c2c4410730017c50b9d.mockapi.io/users/${id}`;
