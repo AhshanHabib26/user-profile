@@ -8,7 +8,6 @@ import DetailsPage from "../DetailsPage/DetailsPage";
 const Datas = () => {
   const [infos, setInfos] = useState([]);
   const [loading, setLoading] = useState(false);
-
   useEffect(() => {
     setLoading(true);
     fetch("https://602e7c2c4410730017c50b9d.mockapi.io/users")
@@ -28,13 +27,14 @@ const Datas = () => {
     return <Spinner />;
   }
 
+
   return (
     <div className=" container my-5">
       <div className={Styles.DatasContainer}>
         <div className="left_container">
           <h4 className=" mb-4 text-danger ">User Lists</h4>
           {infos.map((info) => (
-            <Data info={info} key={info.id} />
+            <Data info={info} key={info.id} onClick={setInfos} />
           ))}
         </div>
         <div className="right_container">

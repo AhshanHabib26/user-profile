@@ -12,6 +12,8 @@ const DetailsPage = () => {
 
   const { Bio, avatar, createdAt, jobTitle, profile} = data;
 
+
+
   // email, firstName, lastName, userName
   const url = `https://602e7c2c4410730017c50b9d.mockapi.io/users/${id}`;
   useEffect(() => {
@@ -24,6 +26,7 @@ const DetailsPage = () => {
           setDataLoading(false);
         } else {
           toast.error(result.error);
+          setDataLoading(false)
         }
       });
   }, []);
