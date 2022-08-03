@@ -16,7 +16,7 @@ const Datas = () => {
         if (data) {
           setInfos(data);
           setLoading(false);
-          toast.success("Data Loaded Succesfully");
+
         } else {
           toast.error(data.error);
         }
@@ -29,16 +29,16 @@ const Datas = () => {
 
 
   return (
-    <div className=" container my-5">
+    <div className=" container">
       <div className={Styles.DatasContainer}>
         <div className="left_container">
-          <h4 className=" mb-4 text-danger ">User Lists</h4>
+          <h4 className={`${Styles.UserText} text-light my-4`}>User Lists</h4>
           {infos.map((info) => (
             <Data info={info} key={info.id} onClick={setInfos} />
           ))}
         </div>
         <div className="right_container">
-          <h4 className=" text-success mb-4">User Details</h4>
+          <h4 className={`${Styles.UserText} text-light my-4`}>User Details</h4>
           <DetailsPage/>
         </div>
       </div>

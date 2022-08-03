@@ -2,7 +2,10 @@
     display: flex;
     align-content: center;
     justify-items: center;
-    margin-bottom: 16px;
+    border: 1px solid #e7e7e7;
+    padding: 6px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }
 .userImage img{
     width: 30px;
@@ -11,10 +14,11 @@
 }
 .userName a{
     text-decoration: none;
-    font-size: 18px;
-    color: #363636;
+    font-size: 16px;
+    font-weight: 600;
+    color: #198754;
     cursor: pointer;
 }
 .userName a:hover{
-    color: #363636;
+    color: #02c469;
 }

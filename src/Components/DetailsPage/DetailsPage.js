@@ -9,7 +9,6 @@ const DetailsPage = () => {
   const { id } = useParams();
   const [data, setData] = useState({});
   const [dataLoading, setDataLoading] = useState(false);
-
   const { Bio, avatar, createdAt, jobTitle, profile} = data;
 
 
@@ -45,30 +44,30 @@ const DetailsPage = () => {
             <img src={avatar} alt="" />
           )}
         </div>
-        <h5 className=" text-center mt-2 text-secondary">
+        <h5 className=" mt-2 mb-0 text-center text-secondary">
           {profile?.username}
         </h5>
         <div className="user_info">
           <div className="bio">
-            <p className=" text-center">
+            <p className=" text-center text-success">
               {Bio ? Bio : "I am Going To Neptune For Get Shanti!"}
             </p>
           </div>
           <div className={Styles.info}>
-            <label htmlFor="">Name:</label>
-            <h5>{`${profile?.firstName} ${profile?.lastName}`}</h5>
+            <label className='text-primary' htmlFor="">Name:</label>
+            <h5 className='text-success'>{`${profile?.firstName} ${profile?.lastName}`}</h5>
           </div>
           <div className={Styles.info}>
-            <label htmlFor="">Email:</label>
-            <h5>{jobTitle ? jobTitle : "Didn't Job"}</h5>
+            <label className='text-primary' htmlFor="">Email:</label>
+            <h5 className='text-success' >{jobTitle ? jobTitle : "Didn't Job"}</h5>
           </div>
           <div className={Styles.info}>
-            <label htmlFor="">Job Title:</label>
-            <h5>{profile?.email ? profile?.email : "Email Not Found"}</h5>
+            <label className='text-primary' htmlFor="">Job Title:</label>
+            <h5 className='text-success' >{profile?.email ? profile?.email : "Email Not Found"}</h5>
           </div>
-          <div className={Styles.info}>
-            <label htmlFor="">Posted Date:</label>
-            <h5>{createdAt ? createdAt : "03-8-2022"}</h5>
+          <div  className={Styles.info}>
+            <label className='text-primary' htmlFor="">Posted Date:</label>
+            <h5 className='text-success' >{createdAt ? createdAt : "03-8-2022"}</h5>
           </div>
         </div>
       </div>

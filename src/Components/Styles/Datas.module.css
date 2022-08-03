@@ -1,5 +1,10 @@
 .DatasContainer{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: 30px;
+}
+.UserText{
+    background-color: #657e72;
+    padding: 10px;
+    text-align: center;
 }
